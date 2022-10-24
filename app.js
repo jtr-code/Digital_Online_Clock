@@ -1,20 +1,22 @@
-let date = new Date();
 
-let hr = date.getHours();
+function dynamicTime() {
+    let date = new Date();
 
-let min = date.getMinutes();
+    let hr = date.getHours();
 
-let sec = date.getSeconds();
+    let min = date.getMinutes();
 
-let display=(`${hr} : ${min} : ${sec}`); 
+    let sec = date.getSeconds();
+
+    let display = (`${hr} : ${min} : ${sec}`);
+    let timeDisplay = document.getElementById('timerow').innerHTML = display;
+
+    console.log(timeDisplay);
+
+}
+
+setInterval("dynamicTime()",1000);
 
 
 
 
-
-let timeDisplay = document.getElementById('timerow');
- 
-timeDisplay.innerHTML = display;
-
-
- 
